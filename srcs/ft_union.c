@@ -6,15 +6,15 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 18:38:49 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/08/31 22:02:33 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/09/02 15:26:52 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- *  This function compares two strings and displays, without doubles, the characters
- *  that appear in either one of the strings.
+ *  This function compares two strings and displays, without doubles, 
+ *  the characters that appear in either one of the strings.
  *
  *  The display will be in the order characters appear in the command line, and
  *  will be followed by a '\n'. If the number of arguments is not 2, the program 
@@ -26,7 +26,7 @@
 int	ft_union(char *s1, char *s2)
 {
 	size_t	n;
-	size_t 	len;
+	size_t	len;
 	char	*start;
 	char	*aux;
 

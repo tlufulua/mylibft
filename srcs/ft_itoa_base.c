@@ -6,23 +6,23 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 14:27:44 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/07/13 08:00:14 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/09/02 15:21:55 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	bytes_str(long unsigned int len, int bs)
+static int	bytes_str(unsigned int n, int bs)
 {
-	size_t	bytes;
+	size_t	len;
 
-	bytes = (len == 0);
-	while (len > 0)
+	len = (n == 0);
+	while (n)
 	{
-		len = len / bs;
-		bytes++;
+		n = n / bs;
+		len++;
 	}
-	return (bytes);
+	return (len);
 }
 
 int	check_base(char *base, int *bs)
@@ -45,31 +45,31 @@ int	check_base(char *base, int *bs)
 	return (1);
 }
 
-char	*ft_itoa_base(long unsigned int n, char *base)
+char	*ft_itoa_base(long int n, char *base)
 {
-	size_t				str_size;
-	char				*nb;
-	long unsigned int	x;
-	int					bs;
+	unsigned int	num;
+	size_t			len;
+	char			*str;
+	int				bs;
 
 	if (!check_base(base, &bs))
 		return (0);
-	x = n;
-	if (n < 0)
-		x = n * -1;
-	str_size = (n < 0) + bytes_str(x, bs);
-	nb = (char *)ft_calloc(sizeof(char), (str_size-- + 1));
-	if (nb && x == 0)
-		nb[str_size] = 0 + '0';
-	while (nb && x > 0)
+	num = n;
+	if (bs == 10 && n < 0)
+		num = n * -1;
+	len = bytes_str(num, bs) + (n < 0 && bs == 10);
+	str = (char *)ft_calloc(len-- + 1);
+	if (str && n == 0)
+		str[len] = '0';
+	while (str && num > 0)
 	{
-		if ((x % bs) < 10)
-			nb[str_size--] = (x % bs) + '0';
+		if ((num % bs) < 10)
+			str[len--] = (num % bs) + '0';
 		else
-			nb[str_size--] = ((x % bs) + 39) + '0';
-		x = x / bs;
+			str[len--] = ((num % bs) + 39) + '0';
+		num = num / bs;
 	}
-	if (n < 0)
-		nb[0] = '-';
-	return (nb);
+	if (n < 0 && bs == 10)
+		str[0] = '-';
+	return (str);
 }
