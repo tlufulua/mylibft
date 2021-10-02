@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 14:27:44 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/09/02 15:21:55 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/10/02 16:11:58 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa_base(long int n, char *base)
 	if (bs == 10 && n < 0)
 		num = n * -1;
 	len = bytes_str(num, bs) + (n < 0 && bs == 10);
-	str = (char *)ft_calloc(len-- + 1);
+	str = (char *)ft_calloc(sizeof(char), len-- + 1);
 	if (str && n == 0)
 		str[len] = '0';
 	while (str && num > 0)

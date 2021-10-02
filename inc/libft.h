@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 11:45:04 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/08/31 18:58:13 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/10/02 16:11:18 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), \
 
 int				get_next_line(int fd, char **line);
 
-char			*ft_itoa_base(long unsigned int n, char *base);
+char			*ft_itoa_base(long int n, char *base);
 int				repeat_char(char *s);
 int				ft_union(char *s1, char *s2);
 
