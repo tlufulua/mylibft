@@ -6,11 +6,11 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 16:38:08 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/08/09 21:12:19 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/10/20 00:31:22 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <ft_printf.h>
 
 void	spaces(t_store *ste, char **spc, int type)
 {

@@ -6,11 +6,11 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 00:31:48 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/04/04 17:49:36 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/10/20 00:32:57 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
 int	ft_isprint(int c)
 {

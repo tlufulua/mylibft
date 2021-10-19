@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 18:39:47 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/08/09 22:26:34 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/10/20 00:33:45 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <limits.h>
-# include "libft.h"
+# include <libft.h>
 
 # define NB_OF_FTS 8
 
