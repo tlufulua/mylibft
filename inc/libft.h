@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 11:45:04 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/10/20 00:34:41 by tlufulua         ###   ########.fr       */
+/*   Updated: 2021/12/03 18:56:21 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ int				ft_printf(const char *format, ...);
 char			*ft_itoa_base(long int n, char *base);
 int				repeat_char(char *s);
 int				ft_union(char *s1, char *s2);
+long int		ft_atoli(const char *str);
 
 #endif
