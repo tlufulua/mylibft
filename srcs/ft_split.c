@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:25:59 by tlufulua          #+#    #+#             */
-/*   Updated: 2021/04/03 17:32:08 by tlufulua         ###   ########.fr       */
+/*   Updated: 2022/03/05 22:12:27 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,6 @@ static int	lenofstr(const char *s, char c)
 	return (i);
 }
 
-static void	free_split(char **array, int x)
-{
-	while (x-- > 0)
-		free(array[x]);
-	free(array);
-}
-
 static char	**write_words(char **array, const char *s, char c, int nb)
 {
 	int		len;
@@ -64,7 +57,7 @@ static char	**write_words(char **array, const char *s, char c, int nb)
 		array[x] = (char *)malloc(sizeof(char) * (len + 1));
 		if (!array[x])
 		{
-			free_split(array, x);
+			free_split(array);
 			return (0);
 		}
 		y = 0;
