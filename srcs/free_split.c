@@ -6,7 +6,7 @@
 /*   By: tlufulua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:25:59 by tlufulua          #+#    #+#             */
-/*   Updated: 2022/03/05 22:05:57 by tlufulua         ###   ########.fr       */
+/*   Updated: 2022/03/15 13:42:58 by tlufulua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 void	free_split(char **array)
 {
-	while (**array)
-		free(array++);
+	char	**aux;
+
+	aux = array;
+	while (*array)
+	{
+		free(*array);
+		array++;
+	}
+	free(aux);
 }
